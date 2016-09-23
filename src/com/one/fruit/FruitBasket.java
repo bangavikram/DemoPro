@@ -48,9 +48,13 @@ public class FruitBasket {
 							
 							break;
 
-						default:
+						case FruitConstants.FRUIT_PEACH:
 							priceOfFruit=FruitConstants.PEACH_PRICE*e.getValue();
 							totalCostOfBucket=totalCostOfBucket+priceOfFruit;
+							
+							break;
+							
+						default:
 							
 							break;
 						}
@@ -70,17 +74,5 @@ public class FruitBasket {
 		
 		
 	}
-	
-public static void main(String[] ar) {
-	HashMap<String, Integer> mapFruit = new HashMap<String,Integer>();
-	mapFruit.put(FruitConstants.FRUIT_LEMON, -7);
-	FruitBasket fp=new FruitBasket();
-	try {
-		System.out.println(fp.calculateBasketValue(mapFruit));
-	} catch (EmptyBasketException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-}
 
 }
