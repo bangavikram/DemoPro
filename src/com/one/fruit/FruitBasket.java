@@ -1,6 +1,6 @@
 package com.one.fruit;
 
-import java.util.HashMap;
+import java.util.Map;
 import java.util.Map.Entry;
 
 import com.fruit.exception.EmptyBasketException;
@@ -17,7 +17,7 @@ public class FruitBasket {
 	* @param basket A map containing key as fruit and value as quantity
 	* @return float Returns the total value of basket.
 	*/
-	public float calculateBasketValue(HashMap<String,Integer> basket) throws EmptyBasketException{
+	public float calculateBasketValue(Map<String,Integer> basket) throws EmptyBasketException{
 		
 		float totalCostOfBucket=0f;
 		if(basket!=null && basket.size()>0){
@@ -55,7 +55,7 @@ public class FruitBasket {
 							break;
 							
 						default:
-							
+							totalCostOfBucket=0f;
 							break;
 						}
 						
@@ -74,5 +74,6 @@ public class FruitBasket {
 		
 		
 	}
+	
 
 }
