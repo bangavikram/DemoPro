@@ -1,8 +1,10 @@
-package com.fruit.test;
+package com.one.fruit;
+
 
 import static org.junit.Assert.*;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 import org.junit.After;
 import org.junit.Before;
@@ -14,15 +16,16 @@ import com.one.fruit.FruitConstants;
 
 public class FruitBasketTest {
 
-	private HashMap<String, Integer> mapFruit=null;
+	private Map<String, Integer> mapFruit=null;
 	private FruitBasket fruitBasket = null;
 	
 		@Before  
 	   public void setUp() throws Exception {
 		
-		mapFruit = new HashMap<String,Integer>();
+		mapFruit = new LinkedHashMap<String,Integer>();
 		fruitBasket=new FruitBasket();
 	    } 
+
 
 	
 		@Test
